@@ -19,14 +19,15 @@ class Game {
                 "phrase": "May the Force be with you"
             },
             {
-                "phrase": "May the Force be with you have to see the Matrix for yourself"
+                "phrase": "You have to see the Matrix for yourself"
             }
         ],
         this.activePhrase = null
 
     }
     getRandomPhrase (){
-        return this.phrases.forEach(phrase => {
-        });
-    }
+            let i = Math.floor((Math.random() * 4));
+            return this.phrases[i];
+        }
+
 }
