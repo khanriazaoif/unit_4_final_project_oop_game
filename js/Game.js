@@ -23,5 +23,10 @@ class Game {
             }
         ],
         this.activePhrase = null
+
+    }
+    getRandomPhrase (){
+        return this.phrases.forEach(phrase => {
+        });
     }
 }
