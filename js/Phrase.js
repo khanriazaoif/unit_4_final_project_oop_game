@@ -9,21 +9,24 @@ class Phrase {
     addPhraseToDisplay(){
         let div = document.createElement("div");
         let ul = document.createElement("ul");
-        let li = document.createElement("li");
+
 
         div.setAttribute("id", "phrase");
         div.className = "section";
 
         const phrase = this.phrase.split('');
         console.log(phrase);
-        for (let i = 0; i < this.phrase.length; i++) {
-            console.log(phrase[i]);
-            if (phrase[i] === ` `){
+        for (let i = 0; i < phrase.length; i++) {
+            let li = document.createElement("li");
+            if (phrase[i] === ' '){
                 li.className = "space";
                 ul.appendChild(li);
+                li.innerText = ' ';
+                console.log(li);
             } else {
                 li.className = `hide letter ${phrase[i]}`;
                 ul.appendChild(li);
+                li.innerText = `${phrase[i]}`;
                 console.log(li);
             }
 
