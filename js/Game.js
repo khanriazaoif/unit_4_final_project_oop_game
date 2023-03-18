@@ -37,9 +37,10 @@ class Game {
 
     startGame(){
         const overlay = document.getElementById('overlay');
+        console.log(overlay);
         overlay.style.display = 'block';
-        this.getRandomPhrase();
-        this.activePhrase = phrase.addPhraseToDisplay();
+        this.activePhrase = this.getRandomPhrase();
+        this.activePhrase.addPhraseToDisplay();
     }
 
 }
