@@ -32,6 +32,14 @@
 // const phrase = new Phrase(randomPhrase.phrase);
 // phrase.addPhraseToDisplay();
 
-const game = new Game();
-game.startGame();
-console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
+// const game = new Game();
+// game.startGame();
+// console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
+
+let game = '';
+const btnReset = document.getElementById('btn__reset')
+console.log(btnReset);
+btnReset.addEventListener('click', ()=> {
+    game = new Game();
+    game.startGame();
+});
