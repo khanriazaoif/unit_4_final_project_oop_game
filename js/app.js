@@ -37,8 +37,9 @@
 // console.log(`Active Phrase - phrase: ${game.activePhrase.phrase}`);
 
 let game = '';
+let letter = ''
 const btnReset = document.getElementById('btn__reset')
-console.log(btnReset);
+// console.log(btnReset);
 btnReset.addEventListener('click', ()=> {
     game = new Game();
     game.startGame();

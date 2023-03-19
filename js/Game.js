@@ -29,8 +29,12 @@ class Game {
         const overlay = document.getElementById('overlay');
         overlay.style.display = 'none';
         this.activePhrase = this.getRandomPhrase();
-        console.log(this.activePhrase);
+        // console.log(this.activePhrase);
         this.activePhrase.addPhraseToDisplay();
+    }
+
+    handleInteraction(){
+
     }
 
 }
