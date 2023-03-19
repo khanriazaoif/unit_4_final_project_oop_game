@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="fec64e98-0afb-4aae-b884-8e335584b491" name="Changes" comment="Unit 4 final project initial upload, working on step 6 complete" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2M4vOPxOLMa2Askbmlo2LD8pE1Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/riazkhan/Library/Mobile Documents/com~apple~CloudDocs/Developer/treehouse/unit_4_final_project_oop_game&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fec64e98-0afb-4aae-b884-8e335584b491" name="Changes" comment="" />
+      <created>1677039636525</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677039636525</updated>
+      <workItem from="1677039637619" duration="1733000" />
+      <workItem from="1677089140116" duration="6917000" />
+      <workItem from="1677107211042" duration="1198000" />
+      <workItem from="1677167917343" duration="786000" />
+      <workItem from="1677442396260" duration="6525000" />
+      <workItem from="1677608904719" duration="600000" />
+      <workItem from="1678251716957" duration="2027000" />
+      <workItem from="1678320639359" duration="8517000" />
+      <workItem from="1678986621767" duration="6539000" />
+    </task>
+    <task id="LOCAL-00001" summary="Unit 4 final project initial upload">
+      <created>1677039678685</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677039678685</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Unit 4 final project initial upload, step 1-3 complete">
+      <created>1677040747478</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677040747478</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Unit 4 final project initial upload, step 4 complete">
+      <created>1677090814236</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677090814237</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Unit 4 final project initial upload, working on step 5">
+      <created>1678320882500</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678320882500</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Unit 4 final project initial upload, working on step 5 complete">
+      <created>1678323634709</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678323634709</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Unit 4 final project initial upload, working on step 6">
+      <created>1678326645789</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678326645789</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Unit 4 final project initial upload, working on step 6 v2">
+      <created>1678988868297</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678988868297</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Unit 4 final project initial upload, working on step 6 complete">
+      <created>1679010635332</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679010635332</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Unit 4 final project initial upload" />
+    <MESSAGE value="Unit 4 final project initial upload, step 1-3 complete" />
+    <MESSAGE value="Unit 4 final project initial upload, step 4 complete" />
+    <MESSAGE value="Unit 4 final project initial upload, working on step 5" />
+    <MESSAGE value="Unit 4 final project initial upload, working on step 5 complete" />
+    <MESSAGE value="Unit 4 final project initial upload, working on step 6" />
+    <MESSAGE value="Unit 4 final project initial upload, working on step 6 v2" />
+    <MESSAGE value="Unit 4 final project initial upload, working on step 6 complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Unit 4 final project initial upload, working on step 6 complete" />
+  </component>
+</project>
