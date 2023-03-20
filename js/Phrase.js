@@ -22,12 +22,12 @@ class Phrase {
                 li.className = "space";
                 ul.appendChild(li);
                 li.innerText = ' ';
-                // console.log(li);
+                console.log(li);
             } else {
                 li.className = `hide letter ${phrase[i]}`;
                 ul.appendChild(li);
                 li.innerText = `${phrase[i]}`;
-                // console.log(li);
+                console.log(li);
             }
 
 
@@ -35,19 +35,26 @@ class Phrase {
 
 
     }
-
-    checkLetter(){
-        const qwerty = document.getElementById('qwerty');
-        qwerty.addEventListener('click', (e) =>{
-            const clickedLetter = e.target;
-            console.log(clickedLetter);
-            if (clickedLetter.innerText === `${phrase[i]}`){
-                console.log('YES');
+    checkLetter(letter){
+        console.log(letter);
+        console.log(this.phrase);
+        const phrase = this.phrase.split('');
+        // console.log(phrase);
+        for (let i = 0; i < phrase.length; i++) {
+            // console.log(phrase[i])
+            if (letter === phrase[i]){
+                return letter;
             } else {
                 console.log('NO');
             }
-        })
+        }
+    }
+
+    showMatchedLetter(letter){
+        const hideLetter = document.querySelector('.hide.letter.m')
+        console.log(hideLetter);
     }
 
 }
+
 
