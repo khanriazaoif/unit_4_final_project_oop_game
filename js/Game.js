@@ -38,9 +38,6 @@ class Game {
     }
 
     checkForWin(){
-        // const phraseId = document.getElementById('phrase')//.firstChild.firstChild;
-        // const ul = phraseId.firstElementChild.firstElementChild;
-        // console.log(ul);
         const hideLetter = document.querySelector('.hide');
         console.log(hideLetter);
         if (hideLetter){
