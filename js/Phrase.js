@@ -7,12 +7,12 @@ class Phrase {
         this.phrase = phrase.toLowerCase();
     }
     addPhraseToDisplay(){
-        let div = document.createElement("div");
-        let ul = document.createElement("ul");
-
-
-        div.setAttribute("id", "phrase");
-        div.className = "section";
+        const ul = document.getElementById('phrase').querySelector('ul');
+        console.log(ul);
+        // let div = document.createElement("div");
+        // let ul = document.createElement("ul");
+        // div.setAttribute("id", "phrase");
+        // div.className = "section";
 
         const phrase = this.phrase.split('');
         // console.log(phrase);
@@ -22,11 +22,13 @@ class Phrase {
                 li.className = "space";
                 ul.appendChild(li);
                 li.innerText = ' ';
+                // console.log(ul);
                 console.log(li);
             } else {
                 li.className = `hide letter ${phrase[i]}`;
                 ul.appendChild(li);
                 li.innerText = `${phrase[i]}`;
+                // console.log(ul);
                 console.log(li);
             }
 
@@ -51,8 +53,13 @@ class Phrase {
     }
 
     showMatchedLetter(letter){
-        const hideLetter = document.querySelector('.hide.letter.m')
+        const s = letter;
+        const hideLetter = document.querySelector(".hide.letter"+'.'+s);
         console.log(hideLetter);
+
+        hideLetter.classList.remove('hide');
+        hideLetter.classList.add('show');
+      
     }
 
 }
