@@ -54,12 +54,14 @@ class Phrase {
 
     showMatchedLetter(letter){
         const s = letter;
-        const hideLetter = document.querySelector(".hide.letter"+'.'+s);
-        console.log(hideLetter);
+        const hideLetter = document.querySelectorAll(".hide.letter"+'.'+s);
+        for (let i = 0; i < hideLetter.length; i++)
+        {
+            console.log(hideLetter[0]);
 
-        hideLetter.classList.remove('hide');
-        hideLetter.classList.add('show');
-      
+            hideLetter[i].classList.remove('hide');
+            hideLetter[i].classList.add('show');
+        }
     }
 
 }
