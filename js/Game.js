@@ -48,8 +48,32 @@ class Game {
 
     }
 
+    removeLife(){
+        if (this.checkForWin() === false && this.missed < 5){
+            this.missed += 1;
+            const triesHearts = document.querySelector('.tries');
+            triesHearts.nextElementSibling.classList.add('hello');
+            const heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
+        } else {
+            console.log('Game Over');
+            game.gameOver();
+        }
+    }
 
-
+    gameOver(gameWon){
+        const overlay = document.getElementById('overlay');
+        const h1Text = document.getElementById('game-over-message');
+        overlay.style.display = 'block';
+        if (gameWon === true){
+            h1Text.innerText = 'You won!';
+            overlay.classList.remove('start');
+            overlay.classList.add('win');
+        } else {
+            h1Text.innerText = 'You lost :(';
+            overlay.classList.remove('start');
+            overlay.classList.add('lose');
+        }
+    }
 
 
 }
