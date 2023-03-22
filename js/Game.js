@@ -34,7 +34,7 @@ class Game {
     }
 
     handleInteraction(){
-
+        console.log()
     }
 
     checkForWin(){
@@ -63,7 +63,7 @@ class Game {
     gameOver(gameWon){
         const overlay = document.getElementById('overlay');
         const h1Text = document.getElementById('game-over-message');
-        overlay.style.display = 'block';
+        overlay.style.display = '';
         if (gameWon === true){
             h1Text.innerText = 'You won!';
             overlay.classList.remove('start');
