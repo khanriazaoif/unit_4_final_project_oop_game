@@ -33,9 +33,7 @@ class Game {
         this.activePhrase.addPhraseToDisplay();
     }
 
-    handleInteraction(){
-        console.log()
-    }
+
 
     checkForWin(){
         const hideLetter = document.querySelector('.hide');
@@ -75,5 +73,17 @@ class Game {
         }
     }
 
+    handleInteraction(){
+        const onscreenKeyboard = document.querySelectorAll('.key');
+
+        for (let i = 0; i < onscreenKeyboard.length; i++){
+            onscreenKeyboard[i].addEventListener('click', ()=> {
+                onscreenKeyboard[i].disabled = true;
+
+            });
+        }
+
+
+    }
 
 }

@@ -8,11 +8,6 @@ class Phrase {
     }
     addPhraseToDisplay(){
         const ul = document.getElementById('phrase').querySelector('ul');
-        console.log(ul);
-        // let div = document.createElement("div");
-        // let ul = document.createElement("ul");
-        // div.setAttribute("id", "phrase");
-        // div.className = "section";
 
         const phrase = this.phrase.split('');
         // console.log(phrase);
