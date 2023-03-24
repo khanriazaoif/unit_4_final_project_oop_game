@@ -15,8 +15,9 @@ btnReset.addEventListener('click', ()=> {
 const onscreenKeyboard = document.querySelectorAll('.key');
 
 for (let i = 0; i < onscreenKeyboard.length; i++){
-    onscreenKeyboard[i].addEventListener('click', ()=> {
-        console.log('button clicked');
-        game.handleInteraction();
+    onscreenKeyboard[i].addEventListener('click', (event)=> {
+        // console.log('button pushed');
+        // console.log(event.target);
+        game.handleInteraction(event);
     });
 }

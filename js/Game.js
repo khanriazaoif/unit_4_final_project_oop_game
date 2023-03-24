@@ -38,7 +38,7 @@ class Game {
     checkForWin(){
         const hideLetter = document.querySelector('.hide');
         console.log(hideLetter);
-        if (hideLetter){
+        if (hideLetter.matches(".hide")){
             return false;
         } else {
             return true;
@@ -47,18 +47,20 @@ class Game {
     }
 
     removeLife(){
+        console.log(this.checkForWin());
         if (this.checkForWin() === false && this.missed < 5){
             this.missed += 1;
-            const triesHearts = document.querySelector('.tries');
-            triesHearts.nextElementSibling.classList.add('hello');
-            const heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
+            // const triesHearts = document.querySelector('.tries');
+            // triesHearts.nextElementSibling.classList.add('hello');
+            let heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
         } else {
             console.log('Game Over');
-            game.gameOver();
+            game.gameOver(true);
         }
     }
 
     gameOver(gameWon){
+        console.log(gameWon);
         const overlay = document.getElementById('overlay');
         const h1Text = document.getElementById('game-over-message');
         overlay.style.display = '';
@@ -73,17 +75,29 @@ class Game {
         }
     }
 
-    handleInteraction(){
-        const onscreenKeyboard = document.querySelectorAll('.key');
+    handleInteraction(event){
+        const hideLetter = document.querySelector('.hide');
+        // for (let i = 0; i < hideLetter.length; i++){
 
-        for (let i = 0; i < onscreenKeyboard.length; i++){
-            onscreenKeyboard[i].addEventListener('click', ()=> {
-                onscreenKeyboard[i].disabled = true;
 
-            });
+        console.log(hideLetter.innerHTML);
+        const disableKey = event.target;
+        // console.log(disableKey);
+        disableKey.disabled = true;
+        const letterKey = event.target.innerText;
+        // console.log(letterKey);
+        if (letterKey !==  hideLetter.innerHTML){
+            console.log('no match');
+                disableKey.classList.add('wrong');
+            this.removeLife();
+
+        } else {
+            console.log('yes match');
+            disableKey.classList.add('chosen');
+            phrase.showMatchedLetter(letterKey);
+            this.checkForWin();
         }
-
-
+        // }
     }
 
 }

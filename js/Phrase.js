@@ -18,13 +18,13 @@ class Phrase {
                 ul.appendChild(li);
                 li.innerText = ' ';
                 // console.log(ul);
-                console.log(li);
+                // console.log(li);
             } else {
                 li.className = `hide letter ${phrase[i]}`;
                 ul.appendChild(li);
                 li.innerText = `${phrase[i]}`;
                 // console.log(ul);
-                console.log(li);
+                // console.log(li);
             }
 
 
@@ -33,8 +33,8 @@ class Phrase {
 
     }
     checkLetter(letter){
-        console.log(letter);
-        console.log(this.phrase);
+        // console.log(letter);
+        // console.log(this.phrase);
         const phrase = this.phrase.split('');
         // console.log(phrase);
         for (let i = 0; i < phrase.length; i++) {
@@ -49,10 +49,11 @@ class Phrase {
 
     showMatchedLetter(letter){
         const s = letter;
+        console.log(s);
         const hideLetter = document.querySelectorAll(".hide.letter"+'.'+s);
         for (let i = 0; i < hideLetter.length; i++)
         {
-            console.log(hideLetter[0]);
+            // console.log(hideLetter[0]);
 
             hideLetter[i].classList.remove('hide');
             hideLetter[i].classList.add('show');
