@@ -94,7 +94,7 @@ class Game {
         } else {
             console.log('yes match');
             disableKey.classList.add('chosen');
-            phrase.showMatchedLetter(letterKey);
+            this.activePhrase.showMatchedLetter(letterKey);
             this.checkForWin();
         }
         // }
