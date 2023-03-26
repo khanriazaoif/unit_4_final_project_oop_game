@@ -37,7 +37,7 @@ class Phrase {
     checkLetter(event) {
         // console.log("checkLetter:", event);
         const phrase = this.phrase.split('');
-        // console.log(phrase);
+        console.log(phrase);
 
         if (phrase.includes(event)) {
             return true;

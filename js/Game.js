@@ -6,11 +6,16 @@ class Game {
     constructor() {
         this.missed = 0,
         this.phrases = [
-            new Phrase("Life is like a box of chocolates"),
-            new Phrase("There is no I in team"),
-            new Phrase("The Matrix has you"),
-            new Phrase("May the Force be with you"),
-            new Phrase("You have to see the Matrix for yourself")
+            // new Phrase("Life is like a box of chocolates"),
+            // new Phrase("There is no I in team"),
+            // new Phrase("The Matrix has you"),
+            // new Phrase("May the Force be with you"),
+            // new Phrase("You have to see the Matrix for yourself")
+            new Phrase("Test o"),
+            new Phrase("Test tw"),
+            new Phrase("Test th"),
+            new Phrase("Test fo"),
+            new Phrase("Test fi")
         ],
         this.activePhrase = null
 
@@ -34,32 +39,32 @@ class Game {
     }
 
     checkForWin() {
-        const letter = document.querySelectorAll('.letter');
-        if (letter.matches(".letter")){
+        const lis = document.querySelectorAll('li');
+        for (const li of lis){
+             if (li.matches(".hide")){
             return false;
         } else {
             return true;
+        }
         }
     }
 
     removeLife(){
         console.log(this.checkForWin());
-        if (this.checkForWin() === false && this.missed < 5){
+        if (this.checkForWin() === true){
+            console.log('YOU WON');
+            // this.missed += 1;
+            // let heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
+        } else if (this.checkForWin() === false && this.missed < 5) {
             this.missed += 1;
-            // const triesHearts = document.querySelector('.tries');
-            // triesHearts.nextElementSibling.classList.add('hello');
             let heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
         } else {
+            game.gameOver(this.checkForWin());
             console.log('Game Over');
-            game.gameOver(true);
         }
     }
 
-    handleInteraction(event){
-        this.activePhrase.checkLetter(event.target.textContent);
-        console.log(this.activePhrase);
 
-    }
 
     // checkForWin(){
     //     const hideLetter = document.querySelector('.hide');
@@ -88,6 +93,14 @@ class Game {
             overlay.classList.remove('start');
             overlay.classList.add('lose');
         }
+    }
+
+
+    handleInteraction(event){
+        this.activePhrase.checkLetter(event.target.textContent);
+        console.log(this.activePhrase);
+        game.removeLife();
+
     }
 
     // handleInteraction(event){
