@@ -32,28 +32,27 @@ class Phrase {
 
 
     }
-    checkLetter(letter){
-        // console.log(letter);
-        // console.log(this.phrase);
+
+
+    checkLetter(event) {
+        // console.log("checkLetter:", event);
         const phrase = this.phrase.split('');
         // console.log(phrase);
-        for (let i = 0; i < phrase.length; i++) {
-            // console.log(phrase[i])
-            if (letter === phrase[i]){
-                return letter;
-            } else {
-                console.log('NO');
-            }
+
+        if (phrase.includes(event)) {
+            return true;
+        } else {
+            return false;
         }
     }
 
-    showMatchedLetter(letter){
-        const s = letter;
+    showMatchedLetter(event){
+        const s = event;
         console.log(s);
         const hideLetter = document.querySelectorAll(".hide.letter"+'.'+s);
         for (let i = 0; i < hideLetter.length; i++)
         {
-            // console.log(hideLetter[0]);
+            console.log(hideLetter[0]);
 
             hideLetter[i].classList.remove('hide');
             hideLetter[i].classList.add('show');

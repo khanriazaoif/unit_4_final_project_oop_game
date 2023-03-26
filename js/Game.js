@@ -33,17 +33,13 @@ class Game {
         this.activePhrase.addPhraseToDisplay();
     }
 
-
-
-    checkForWin(){
-        const hideLetter = document.querySelector('.hide');
-        console.log(hideLetter);
-        if (hideLetter.matches(".hide")){
+    checkForWin() {
+        const letter = document.querySelectorAll('.letter');
+        if (letter.matches(".letter")){
             return false;
         } else {
             return true;
         }
-
     }
 
     removeLife(){
@@ -58,6 +54,25 @@ class Game {
             game.gameOver(true);
         }
     }
+
+    handleInteraction(event){
+        this.activePhrase.checkLetter(event.target.textContent);
+        console.log(this.activePhrase);
+
+    }
+
+    // checkForWin(){
+    //     const hideLetter = document.querySelector('.hide');
+    //     console.log(hideLetter);
+    //     if (hideLetter.matches(".hide")){
+    //         return false;
+    //     } else {
+    //         return true;
+    //     }
+    //
+    // }
+
+
 
     gameOver(gameWon){
         console.log(gameWon);
@@ -75,29 +90,29 @@ class Game {
         }
     }
 
-    handleInteraction(event){
-        const hideLetter = document.querySelector('.hide');
-        // for (let i = 0; i < hideLetter.length; i++){
-
-
-        console.log(hideLetter.innerHTML);
-        const disableKey = event.target;
-        // console.log(disableKey);
-        disableKey.disabled = true;
-        const letterKey = event.target.innerText;
-        // console.log(letterKey);
-        if (letterKey !==  hideLetter.innerHTML){
-            console.log('no match');
-                disableKey.classList.add('wrong');
-            this.removeLife();
-
-        } else {
-            console.log('yes match');
-            disableKey.classList.add('chosen');
-            this.activePhrase.showMatchedLetter(letterKey);
-            this.checkForWin();
-        }
-        // }
-    }
+    // handleInteraction(event){
+    //     const hideLetter = document.querySelectorAll('.hide');
+    //     for (let i = 0; i < hideLetter.length; i++){
+    //
+    //
+    //     console.log(hideLetter[i].innerHTML);
+    //     const disableKey = event.target;
+    //     // console.log(disableKey);
+    //     disableKey.disabled = true;
+    //     const letterKey = event.target.innerText;
+    //     console.log(letterKey);
+    //     if (letterKey !==  hideLetter[i].innerHTML){
+    //         console.log('no match');
+    //             disableKey.classList.add('wrong');
+    //         this.removeLife();
+    //
+    //     } else {
+    //         console.log('yes match');
+    //         disableKey.classList.add('chosen');
+    //         this.activePhrase.showMatchedLetter(letterKey);
+    //         this.checkForWin();
+    //     }
+    //     }
+    // }
 
 }
