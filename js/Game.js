@@ -58,7 +58,7 @@ class Game {
         } else if (this.checkForWin() === false && this.missed < 5) {
             this.missed += 1;
             let heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
-        } else {
+        } else if (this.checkForWin() === false && this.missed >= 5){
             game.gameOver(this.checkForWin());
             console.log('Game Over');
         }
@@ -98,8 +98,10 @@ class Game {
 
     handleInteraction(event){
         this.activePhrase.checkLetter(event.target.textContent);
-        console.log(this.activePhrase);
-        game.removeLife();
+        // console.log(this.activePhrase);
+        // game.removeLife();
+        this.handleInteraction(event)
+            console.log(event);
 
     }
 
