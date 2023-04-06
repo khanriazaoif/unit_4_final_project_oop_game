@@ -45,7 +45,7 @@ class Game {
              if (hideLetter.length > 0){
             return false;
         } else {
-            return true;
+            this.gameOver(true);
 
         }
     }
