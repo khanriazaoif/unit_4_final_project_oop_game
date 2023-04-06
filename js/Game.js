@@ -40,14 +40,13 @@ class Game {
 
 
     checkForWin() {
-        const lis = document.querySelectorAll('li');
-        console.log(lis);
-        for (const li of lis){
-             if (li.classList.contains("hide")){
+        const hideLetter = document.querySelectorAll('.hide');
+        console.log(hideLetter.length);
+             if (hideLetter.length > 0){
             return false;
         } else {
             return true;
-        }
+
         }
     }
 
@@ -57,10 +56,10 @@ class Game {
             console.log('YOU WON');
             // this.missed += 1;
             // let heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
-        } else if (this.checkForWin() === false && this.missed < 5) {
+        } else if (this.checkForWin() === false && this.missed < 4) {
             this.missed += 1;
             let heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
-        } else if (this.checkForWin() === false && this.missed >= 5){
+        } else if (this.checkForWin() === false && this.missed >= 4){
             game.gameOver(this.checkForWin());
             console.log('Game Over');
         }
