@@ -54,6 +54,7 @@ class Game {
         console.log(this.checkForWin());
         if (this.checkForWin() === true){
             console.log('YOU WON');
+            game.gameOver(this.checkForWin())
             // this.missed += 1;
             // let heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
         } else if (this.checkForWin() === false && this.missed < 4) {
@@ -97,33 +98,42 @@ class Game {
     }
 
 
-    handleInteraction(event){
-        // const hideLetter = document.querySelector('.hide');
-        // console.log(event.target);
-        const disableKey = event.target;
-            disableKey.disabled = true;
-        // for (let i = 0; i < hideLetter.length; i++) {
-            const letterKey = event.target.innerText;
-            console.log(letterKey);
-        const phrase2 = this.phrases;
-        console.log(phrase2);
-            if (letterKey !== phrase2) {
-                console.log('no match');
-                disableKey.classList.add('wrong');
-                this.removeLife();
+    handleInteraction(button){
+        console.log(button);
+         // const hideLetter = document.querySelector('.hide');
+         // console.log(event.target);
+         const disableKey = button.target;
+             disableKey.disabled = true;
+         // for (let i = 0; i < hideLetter.length; i++) {
+             const letterKey = event.target.innerText;
+             console.log(letterKey); //output t
+         const activePhrase = this.activePhrase;
+         console.log(activePhrase)
+        const activePhraseSplit = activePhrase.phrase.split('');
+        console.log(activePhraseSplit)
+        const phraseLetter = activePhraseSplit.includes(letterKey);
+        console.log(phraseLetter);
+             if (!phraseLetter) {
+                 console.log('no match');
+                 disableKey.classList.add('wrong');
+                 this.removeLife();
 
-            } else {
-                console.log('yes match');
-                disableKey.classList.add('chosen');
-                // this.activePhrase.showMatchedLetter(letterKey);
-                // this.checkForWin();
-            }
+             } else {
+                 console.log('yes match');
+                 disableKey.classList.add('chosen');
+                 this.activePhrase.showMatchedLetter(letterKey);
+                 this.checkForWin();
+                 console.log(this.checkForWin());
+                 if (!this.checkForWin){
+                     this.gameOver(this.checkForWin);
+                 }
+             }
         }
-        // this.activePhrase.checkLetter(event.target.textContent);
-        // console.log(this.activePhrase);
-        // game.removeLife();
-        // this.handleInteraction(event)
-        //     console.log(event);
+         // this.activePhrase.checkLetter(event.target.textContent);
+         // console.log(this.activePhrase);
+         // game.removeLife();
+         // this.handleInteraction(event)
+         //     console.log(event);
 
     }
 
