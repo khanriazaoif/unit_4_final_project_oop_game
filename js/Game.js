@@ -38,10 +38,12 @@ class Game {
         this.activePhrase.addPhraseToDisplay();
     }
 
+
     checkForWin() {
         const lis = document.querySelectorAll('li');
+        console.log(lis);
         for (const li of lis){
-             if (li.matches(".hide")){
+             if (li.classList.contains("hide")){
             return false;
         } else {
             return true;
@@ -97,11 +99,32 @@ class Game {
 
 
     handleInteraction(event){
-        this.activePhrase.checkLetter(event.target.textContent);
+        // const hideLetter = document.querySelector('.hide');
+        // console.log(event.target);
+        const disableKey = event.target;
+            disableKey.disabled = true;
+        // for (let i = 0; i < hideLetter.length; i++) {
+            const letterKey = event.target.innerText;
+            console.log(letterKey);
+        const phrase2 = this.phrases;
+        console.log(phrase2);
+            if (letterKey !== phrase2) {
+                console.log('no match');
+                disableKey.classList.add('wrong');
+                this.removeLife();
+
+            } else {
+                console.log('yes match');
+                disableKey.classList.add('chosen');
+                // this.activePhrase.showMatchedLetter(letterKey);
+                // this.checkForWin();
+            }
+        }
+        // this.activePhrase.checkLetter(event.target.textContent);
         // console.log(this.activePhrase);
         // game.removeLife();
-        this.handleInteraction(event)
-            console.log(event);
+        // this.handleInteraction(event)
+        //     console.log(event);
 
     }
 
@@ -129,5 +152,3 @@ class Game {
     //     }
     //     }
     // }
-
-}
