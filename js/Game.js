@@ -6,16 +6,16 @@ class Game {
     constructor() {
         this.missed = 0,
         this.phrases = [
-            // new Phrase("Life is like a box of chocolates"),
-            // new Phrase("There is no I in team"),
-            // new Phrase("The Matrix has you"),
-            // new Phrase("May the Force be with you"),
-            // new Phrase("You have to see the Matrix for yourself")
-            new Phrase("Test o"),
-            new Phrase("Test tw"),
-            new Phrase("Test th"),
-            new Phrase("Test fo"),
-            new Phrase("Test fi")
+            new Phrase("Life is like a box of chocolates"),
+            new Phrase("There is no I in team"),
+            new Phrase("The Matrix has you"),
+            new Phrase("May the Force be with you"),
+            new Phrase("You have to see the Matrix for yourself")
+            // new Phrase("Test o"),
+            // new Phrase("Test tw"),
+            // new Phrase("Test th"),
+            // new Phrase("Test fo"),
+            // new Phrase("Test fi")
         ],
         this.activePhrase = null
 
@@ -59,7 +59,7 @@ class Game {
             // let heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
         } else if (this.checkForWin() === false && this.missed < 4) {
             this.missed += 1;
-            let heartImage = document.querySelector('img[src="images/liveHeart.png"]').src="../images/lostHeart.png";
+            let heartImage = document.querySelector('img[src="../images/liveHeart.png"]').src="../images/lostHeart.png";
         } else if (this.checkForWin() === false && this.missed >= 4){
             game.gameOver(this.checkForWin());
             console.log('Game Over');
@@ -151,14 +151,18 @@ class Game {
             }
 
             function resetHearts(){
-
+                let heartImage = document.querySelectorAll('img');
+                console.log(heartImage);
+                for (let i = 0; i < heartImage.length; i++){
+                    console.log(heartImage[i]);
+                    heartImage[i].src="../images/liveHeart.png"
+                }
             }
-
-
 
             removeUL();
             resetKeys();
             disableKeyRemove();
+            resetHearts();
             }
 
 
