@@ -11,15 +11,16 @@ class Game {
             new Phrase("The Matrix has you"),
             new Phrase("May the Force be with you"),
             new Phrase("You have to see the Matrix for yourself")
-            // new Phrase("Test o"),
-            // new Phrase("Test tw"),
-            // new Phrase("Test th"),
-            // new Phrase("Test fo"),
-            // new Phrase("Test fi")
         ],
         this.activePhrase = null
 
     }
+
+    /**
+     * Selects random phrase from phrases property
+     * @return {Object} Phrase object chosen to be used
+     */
+
     getRandomPhrase(){
             let i = Math.floor((Math.random() * 4));
             return this.phrases[i];
@@ -38,6 +39,10 @@ class Game {
         this.activePhrase.addPhraseToDisplay();
     }
 
+    /**
+     * Checks for winning move
+     * @return {boolean} True if game has been won, false if game wasn't
+     won */
 
     checkForWin() {
         const hideLetter = document.querySelectorAll('.hide');
@@ -49,6 +54,12 @@ class Game {
 
         }
     }
+
+    /**
+     * Increases the value of the missed property
+     * Removes a life from the scoreboard
+     * Checks if player has remaining lives and ends game if player is out
+     */
 
     removeLife(){
         console.log(this.checkForWin());
@@ -65,6 +76,11 @@ class Game {
             console.log('Game Over');
         }
     }
+
+    /**
+     * Displays game over message
+     * @param {boolean} gameWon - Whether or not the user won the game
+     */
 
     gameOver(gameWon){
         console.log(gameWon);
@@ -84,6 +100,10 @@ class Game {
         }
     }
 
+    /**
+     * Handles onscreen keyboard button clicks
+     * @param (HTMLButtonElement) button - The clicked button element
+     */
 
     handleInteraction(button){
         console.log(button);

@@ -6,6 +6,11 @@ class Phrase {
     constructor(phrase){
         this.phrase = phrase.toLowerCase();
     }
+
+    /**
+     * Display phrase on game board
+     */
+
     addPhraseToDisplay(){
         const ul = document.getElementById('phrase').querySelector('ul');
 
@@ -32,6 +37,10 @@ class Phrase {
 
     }
 
+    /**
+     * Checks if passed letter is in phrase
+     * @param (string) letter - Letter to check
+     */
 
     checkLetter(event) {
         // console.log("checkLetter:", event);
