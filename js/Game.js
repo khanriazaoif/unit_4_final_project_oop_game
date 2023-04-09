@@ -90,10 +90,12 @@ class Game {
             h1Text.innerText = 'You won!';
             overlay.classList.remove('start');
             overlay.classList.add('win');
+            this.resetGame();
         } else {
             h1Text.innerText = 'You lost :(';
             overlay.classList.remove('start');
             overlay.classList.add('lose');
+            this.resetGame();
         }
     }
 
@@ -129,35 +131,15 @@ class Game {
                  }
              }
         }
-         // this.activePhrase.checkLetter(event.target.textContent);
-         // console.log(this.activePhrase);
-         // game.removeLife();
-         // this.handleInteraction(event)
-         //     console.log(event);
+        resetGame() {
+                const phraseID = document.getElementById("phrase");
+                const ul = phraseID.firstElementChild;
+                while(ul.firstChild){
+                    ul.removeChild(ul.firstChild);
+                }
+                console.log(ul);
+
+            }
+
 
     }
-
-    // handleInteraction(event){
-    //     const hideLetter = document.querySelectorAll('.hide');
-    //     for (let i = 0; i < hideLetter.length; i++){
-    //
-    //
-    //     console.log(hideLetter[i].innerHTML);
-    //     const disableKey = event.target;
-    //     // console.log(disableKey);
-    //     disableKey.disabled = true;
-    //     const letterKey = event.target.innerText;
-    //     console.log(letterKey);
-    //     if (letterKey !==  hideLetter[i].innerHTML){
-    //         console.log('no match');
-    //             disableKey.classList.add('wrong');
-    //         this.removeLife();
-    //
-    //     } else {
-    //         console.log('yes match');
-    //         disableKey.classList.add('chosen');
-    //         this.activePhrase.showMatchedLetter(letterKey);
-    //         this.checkForWin();
-    //     }
-    //     }
-    // }
