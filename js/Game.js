@@ -66,21 +66,6 @@ class Game {
         }
     }
 
-
-
-    // checkForWin(){
-    //     const hideLetter = document.querySelector('.hide');
-    //     console.log(hideLetter);
-    //     if (hideLetter.matches(".hide")){
-    //         return false;
-    //     } else {
-    //         return true;
-    //     }
-    //
-    // }
-
-
-
     gameOver(gameWon){
         console.log(gameWon);
         const overlay = document.getElementById('overlay');
@@ -114,18 +99,18 @@ class Game {
         const activePhraseSplit = activePhrase.phrase.split('');
         console.log(activePhraseSplit)
         const phraseLetter = activePhraseSplit.includes(letterKey);
-        console.log(phraseLetter);
+        // console.log(phraseLetter);
              if (!phraseLetter) {
-                 console.log('no match');
+                 // console.log('no match');
                  disableKey.classList.add('wrong');
                  this.removeLife();
 
              } else {
-                 console.log('yes match');
+                 // console.log('yes match');
                  disableKey.classList.add('chosen');
                  this.activePhrase.showMatchedLetter(letterKey);
                  this.checkForWin();
-                 console.log(this.checkForWin());
+                 // console.log(this.checkForWin());
                  if (!this.checkForWin){
                      this.gameOver(this.checkForWin);
                  }
@@ -137,7 +122,21 @@ class Game {
                 while(ul.firstChild){
                     ul.removeChild(ul.firstChild);
                 }
-                console.log(ul);
+                const keyRow = document.querySelectorAll('.key');
+            console.log(keyRow);
+                for (let i = 0; i < keyRow.length; i++){
+                    // console.log(keyRow[i]);
+                    if (keyRow[i].className === 'key wrong'){
+                        keyRow[i].classList.remove('wrong');
+                        // console.log('YES KEY WRONG');
+                    } else if (keyRow[i].className === 'key chosen') {
+                        keyRow[i].classList.remove('chosen');
+                        // console.log('YES KEY CHOSEN');
+                    } else{
+                        // console.log("ALL GOOD");
+                    }
+                }
+
 
             }
 

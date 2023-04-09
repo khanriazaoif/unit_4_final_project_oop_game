@@ -27,7 +27,6 @@ class Phrase {
                 // console.log(li);
             }
 
-
         }
 
 
