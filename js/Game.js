@@ -117,13 +117,17 @@ class Game {
              }
         }
         resetGame() {
+            function removeUL(){
                 const phraseID = document.getElementById("phrase");
                 const ul = phraseID.firstElementChild;
                 while(ul.firstChild){
                     ul.removeChild(ul.firstChild);
                 }
+            }
+
+            function resetKeys(){
                 const keyRow = document.querySelectorAll('.key');
-            console.log(keyRow);
+            // console.log(keyRow);
                 for (let i = 0; i < keyRow.length; i++){
                     // console.log(keyRow[i]);
                     if (keyRow[i].className === 'key wrong'){
@@ -137,7 +141,24 @@ class Game {
                     }
                 }
 
+            }
 
+            function disableKeyRemove(){
+                const keyRow = document.querySelectorAll('.key');
+                for (let i = 0; i < keyRow.length; i++){
+                    keyRow[i].disabled = false;
+                }
+            }
+
+            function resetHearts(){
+
+            }
+
+
+
+            removeUL();
+            resetKeys();
+            disableKeyRemove();
             }
 
 
